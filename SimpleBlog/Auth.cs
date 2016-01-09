@@ -15,7 +15,7 @@ namespace SimpleBlog
         {
             get
             {
-                if(!HttpContext.Current.User.Identity.IsAuthenticated)
+                if (!HttpContext.Current.User.Identity.IsAuthenticated)
                     return null;
 
                 var user = HttpContext.Current.Items[UserKey] as User;
@@ -24,8 +24,8 @@ namespace SimpleBlog
                     user =
                         Database.Session.Query<User>()
                             .FirstOrDefault(u => u.Username == HttpContext.Current.User.Identity.Name);
-                    if (user == null) ;
-                    return null;
+                    if (user == null)
+                        return null;
 
                     HttpContext.Current.Items[UserKey] = user;
 
