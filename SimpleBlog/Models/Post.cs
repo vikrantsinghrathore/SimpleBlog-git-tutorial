@@ -17,11 +17,13 @@ namespace SimpleBlog.Models
         public virtual string Content { get; set; }
 
         public virtual DateTime CreatedAt { get; set; }
-        public virtual DateTime UpdatedAt { get; set; }
-        public virtual DateTime DeletedAt { get; set; }
+        public virtual DateTime? UpdatedAt { get; set; }
+        public virtual DateTime? DeletedAt { get; set; }
         public virtual bool IsDeleted { get { return DeletedAt != null; } }
         public virtual IList<Tag> Tags { get; set; }
-    
+
+
+
     }
 
     public class PostMap : ClassMapping<Post>
@@ -47,6 +49,7 @@ namespace SimpleBlog.Models
                 x.Column("created_at");
                 x.NotNullable(true);
             });
+
             Property(x => x.UpdatedAt, x => x.Column("updated_at"));
             Property(x => x.DeletedAt, x => x.Column("deleted_at"));
 
@@ -54,9 +57,8 @@ namespace SimpleBlog.Models
             {
                 x.Key(y => y.Column("post_id"));
                 x.Table("post_tags");
-            }, x => x.ManyToMany(y => y.Column("tag_id"))
-            );
-       
+            }, x => x.ManyToMany(y => y.Column("tag_id")));
+
         }
 
 

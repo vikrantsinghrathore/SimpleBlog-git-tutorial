@@ -26,7 +26,7 @@ namespace SimpleBlog.Migrations
 
             Create.Table("post_tags")
                 .WithColumn("tag_id").AsInt32().ForeignKey("tags", "id").OnDelete(Rule.Cascade)
-                .WithColumn("post _id").AsInt32().ForeignKey("posts", "id").OnDelete(Rule.Cascade);
+                .WithColumn("post_id").AsInt32().ForeignKey("posts", "id").OnDelete(Rule.Cascade);
 
         }
 

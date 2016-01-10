@@ -30,8 +30,7 @@ namespace SimpleBlog.Models
             {
                 x.Key(y => y.Column("tag_id"));
                 x.Table("post_tags");
-            }, x => x.ManyToMany(y => y.Column("post_id"))
-            );
+            }, x => x.ManyToMany(y => y.Column("post_id")));
 
         }
     }
