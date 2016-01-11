@@ -1,0 +1,4 @@
+[{"id":1, "username":"vikrant", "email":"v@tm.com", "password_hash":"$2a$13$uFyq0wDMEWnhdEWVRxwRfu7wBCz9hgPADQRlJBIywviBkAnA6GVAy"},
+ {"id":2, "username":"v2", "email":"v2@tm.com", "password_hash":"$2a$13$i7oAlxG7XXDMlHpEW573qexa3r9F0jN5y5mKYRTaCgrXaE7iVSOKG"},
+ {"id":4, "username":"v3", "email":"v3@tm.com", "password_hash":"$2a$13$zv66rRdoFpO.6DnUWY14EOznNSeIa/UfTSVY8joKFQLcIqtIkbCty"},
+ {"id":5, "username":"ketan", "email":"k@kk.com", "password_hash":"$2a$13$4vF.yRpVLf7N883mMMTCUeSSOzB4LS1oE6thiqJh/HHmcKFzzH8XK"}]
